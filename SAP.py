@@ -21,6 +21,16 @@ from tqdm import tqdm
 
 sia = SentimentIntensityAnalyzer()
 
-results = sia.polarity_scores('This is a great product!')
+#run the polarity scores on the reviews
+res = {}
+for i, row in tqdm(df.head(500).iterrows(), total=500):
+    text = row['Text']
+    myid = row['Id']
+    res[myid] = sia.polarity_scores(text)
 
-print("Sentiment Analysis Result:", results)
+vaders= pd.DataFrame(res).T
+vaders = vaders.reset_index().rename(columns={'index': 'Id'})
+vaders = vaders.merge(df, how='left')
+
+#seniment score and meta data
+print(vaders.head())
