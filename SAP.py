@@ -14,4 +14,13 @@ df = pd.read_csv('input/amazon-food-review/Reviews.csv')
 #Display graphical representation of the first 5 rows
 ax = df['Score'].value_counts().sort_index().plot(kind='bar', title='Count of Reviews by stars', figsize=(10, 5))
 ax.set_xlabel('Review Stars')
-plt.show()
+##plt.show()
+
+from nltk.sentiment import SentimentIntensityAnalyzer
+from tqdm import tqdm
+
+sia = SentimentIntensityAnalyzer()
+
+results = sia.polarity_scores('This is a great product!')
+
+print("Sentiment Analysis Result:", results)
