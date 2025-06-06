@@ -1,13 +1,12 @@
 # Sentiment Analysis Project
 
-This project performs sentiment analysis on Amazon food reviews using both traditional (VADER) and transformer-based (RoBERTa) models. It demonstrates how to preprocess data, apply sentiment models, and visualize results.
+This project performs sentiment analysis on Amazon food reviews using transformer-based (RoBERTa) models. It demonstrates how to preprocess data, apply sentiment models, and visualize results.
 
 ## Features
 
 - Loads and analyzes Amazon food review data
-- Uses VADER (NLTK) for rule-based sentiment scoring
 - Uses RoBERTa (HuggingFace Transformers) for deep learning sentiment scoring
-- Compares and visualizes sentiment results
+- Visualizes sentiment results
 
 ## Requirements
 
@@ -33,7 +32,7 @@ Place the [Amazon Food Reviews dataset](https://www.kaggle.com/datasets/snap/ama
 
 ## Usage
 
-1. Download NLTK VADER lexicon (only once):
+1. Download NLTK (only once):
     ```python
     import nltk
     nltk.download('vader_lexicon')
