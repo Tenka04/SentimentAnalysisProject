@@ -65,7 +65,3 @@ The script generates a seaborn pairplot comparing RoBERTa sentiment scores (`rob
 
 - If you see a warning about HuggingFace symlinks on Windows, you can ignore it.
 - For best performance, ensure you have a compatible version of PyTorch installed.
-
-## License
-
-This project is for educational purposes.
