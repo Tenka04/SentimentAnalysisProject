@@ -68,4 +68,4 @@ sns.pairplot(data=results_df,
              vars=['roberta_neg', 'roberta_neu','roberta_pos'], 
              hue='Score',
              palette='tab10')
-#plt.show()
+plt.show()
